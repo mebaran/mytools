@@ -1,0 +1,15 @@
+version = 1
+revision = 3
+requires-python = ">=3.13"
+
+[manifest]
+requirements = [{ name = "pgserviceparser" }]
+
+[[package]]
+name = "pgserviceparser"
+version = "2.5.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f4/9c/4712b7118432a4bdcbd7fc668b2af8420ffed2d23096df617e32139325e7/pgserviceparser-2.5.0.tar.gz", hash = "sha256:229f7b3d18c48b992f6f93f8454825a5425f4ea8d28811608a829388ba4ac341", size = 9576, upload-time = "2025-09-16T09:37:14.379Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/24/ed/e21fa2abdc139c4f8b2b2d57ba02e93309455a6b85ab1be0bb3db449b407/pgserviceparser-2.5.0-py3-none-any.whl", hash = "sha256:899ef9d82ea8a5980a777af93d10145b701954d8d43480c2eb2c901d0c469f71", size = 5437, upload-time = "2025-09-16T09:37:12.518Z" },
+]
