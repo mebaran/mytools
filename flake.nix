@@ -77,7 +77,7 @@
             );
           in
           # Write out an executable script with a shebang pointing to the scripts virtualenv
-          pkgs.writeScript script.name (
+          pkgs.writeScriptBin script.name (
             # Returns script as a string with inserted shebang
             script.renderScript {
               # Construct a virtual environment for script
@@ -95,15 +95,6 @@
       packages = forAllSystems (
         system:
         lib.mapAttrs' (name: drv: lib.nameValuePair (lib.removeSuffix ".py" name) drv) packages'.${system}
-      );
-
-      # Make each script runnable directly with `nix run`
-      apps = forAllSystems (
-        system:
-        lib.mapAttrs (_name: script: {
-          type = "app";
-          program = "${script}";
-        }) self.packages.${system}
       );
     };
 }
